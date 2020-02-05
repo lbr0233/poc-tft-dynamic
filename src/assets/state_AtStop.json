@@ -1,0 +1,88 @@
+{
+  "sequence": {
+    "_comment": "sequence est une liste ordonnée de screens",
+    "state": 0,
+    "screens": [
+      {
+        "_comment1": "un screen est une liste de components",
+        "name": "screen A l'arret : arret en cours",
+        "_comment2": "size =full|half-left|half-right",
+        "size": "full",
+        "transitionIN": "fadeIN",
+        "transitionOUT": "fadeOUT",
+        "bg": { "color": "#00000", "picture": "bg.png" },
+        "components": [
+          { "name": "clock", "size": "30pt", "position": "top-right" },
+          {
+            "name": "logo-cg",
+            "size": "30pt",
+            "position": "bottom-right",
+            "resource": "logo1.png"
+          },
+          {
+            "name": "logo-cie",
+            "size": "30pt",
+            "position": "bottom-left",
+            "resource": "logo2.png"
+          },
+          {
+            "name": "text",
+            "position": "middle"
+          }
+        ]
+      },
+      {
+        "name": "screen A l'arret : correspondances",
+        "size": "full",
+        "transitionIN": "fadeIN",
+        "transitionOUT": "fadeOUT",
+        "bg": { "color": "#00000", "picture": "bg.png" },
+        "components": [
+          { "name": "clock", "size": "30pt", "position": "top-right" },
+          {
+            "name": "logo-cg",
+            "size": "30pt",
+            "position": "bottom-right",
+            "resource": "logo1.png"
+          },
+          {
+            "name": "logo-cie",
+            "size": "30pt",
+            "position": "bottom-left",
+            "resource": "logo2.png"
+          },
+          {
+            "name": "text",
+            "position": "middle"
+          }
+        ]
+      },
+      {
+        "name": "screen A l'arret : next stop",
+        "size": "full",
+        "transitionIN": "fadeIN",
+        "transitionOUT": "fadeOUT",
+        "bg": { "color": "#00000", "picture": "bg.png" },
+        "components": [
+          { "name": "clock", "size": "30pt", "position": "top-right" },
+          {
+            "name": "logo-cg",
+            "size": "30pt",
+            "position": "bottom-right",
+            "resource": "logo1.png"
+          },
+          {
+            "name": "logo-cie",
+            "size": "30pt",
+            "position": "bottom-left",
+            "resource": "logo2.png"
+          },
+          {
+            "name": "text",
+            "position": "middle"
+          }
+        ]
+      }
+    ]
+  }
+}

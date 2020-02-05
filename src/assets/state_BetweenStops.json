@@ -1,0 +1,90 @@
+{
+  "sequence": {
+    "_comment": "sequence est une liste ordonnée de screens",
+    "state": 1,
+    "screens": [
+      {
+        "_comment1": "un screen est une liste de components",
+        "name": "screen Interarret : prochain arret",
+        "_comment2": "size =full|half-left|half-right",
+        "size": "full",
+        "transitionIN": "fadeIN",
+        "transitionOUT": "fadeOUT",
+        "bg": { "color": "#00000", "picture": "bg.png" },
+        "components": [
+          { "name": "clock", "size": "30pt", "position": "top-right" },
+          {
+            "name": "logo-cg",
+            "size": "30pt",
+            "position": "bottom-right",
+            "resource": "logo1.png"
+          },
+          {
+            "name": "logo-cie",
+            "size": "30pt",
+            "position": "bottom-left",
+            "resource": "logo2.png"
+          },
+          {
+            "name": "text",
+            "position": "middle"
+          }
+        ]
+      },
+      [
+        {
+          "name": "screen Interarret : thermometre V",
+          "size": "half-left",
+          "transitionIN": "fadeIN",
+          "transitionOUT": "fadeOUT",
+          "bg": { "color": "#00000", "picture": "bg.png" },
+          "components": [
+            { "name": "clock", "size": "30pt", "position": "top-right" },
+            {
+              "name": "logo-cg",
+              "size": "30pt",
+              "position": "bottom-right",
+              "resource": "logo1.png"
+            },
+            {
+              "name": "logo-cie",
+              "size": "30pt",
+              "position": "bottom-left",
+              "resource": "logo2.png"
+            },
+            {
+              "name": "thermometre-V",
+              "position": "middle"
+            }
+          ]
+        },
+        {
+          "name": "screen Interarret : thermometre H",
+          "size": "half-right",
+          "transitionIN": "fadeIN",
+          "transitionOUT": "fadeOUT",
+          "bg": { "color": "#00000", "picture": "bg.png" },
+          "components": [
+            { "name": "clock", "size": "30pt", "position": "top-right" },
+            {
+              "name": "logo-cg",
+              "size": "30pt",
+              "position": "bottom-right",
+              "resource": "logo1.png"
+            },
+            {
+              "name": "logo-cie",
+              "size": "30pt",
+              "position": "bottom-left",
+              "resource": "logo2.png"
+            },
+            {
+              "name": "thermometre-H",
+              "position": "middle"
+            }
+          ]
+        }
+      ]
+    ]
+  }
+}
