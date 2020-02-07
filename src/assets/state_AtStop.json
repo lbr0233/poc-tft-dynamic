@@ -5,12 +5,12 @@
     "screens": [
       {
         "_comment1": "un screen est une liste de components",
-        "name": "screen A l'arret : arret en cours",
+        "name": "1 -> screen A l'arret : arret en cours",
         "_comment2": "size =full|half-left|half-right",
         "size": "full",
         "transitionIN": "fadeIN",
         "transitionOUT": "fadeOUT",
-        "bg": { "color": "#00000", "picture": "bg.png" },
+        "bg": { "color": "azure", "picture": "bg.jpg" },
         "components": [
           { "name": "clock", "size": "30pt", "position": "top-right" },
           {
@@ -32,11 +32,11 @@
         ]
       },
       {
-        "name": "screen A l'arret : correspondances",
+        "name": "2 -> screen A l'arret : correspondances",
         "size": "full",
         "transitionIN": "fadeIN",
         "transitionOUT": "fadeOUT",
-        "bg": { "color": "#00000", "picture": "bg.png" },
+        "bg": { "color": "azure", "picture": "bg.jpg" },
         "components": [
           { "name": "clock", "size": "30pt", "position": "top-right" },
           {
@@ -58,11 +58,11 @@
         ]
       },
       {
-        "name": "screen A l'arret : next stop",
+        "name": "3 -> screen A l'arret : next stop",
         "size": "full",
         "transitionIN": "fadeIN",
         "transitionOUT": "fadeOUT",
-        "bg": { "color": "#00000", "picture": "bg.png" },
+        "bg": { "color": "azure"},
         "components": [
           { "name": "clock", "size": "30pt", "position": "top-right" },
           {

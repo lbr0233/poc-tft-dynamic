@@ -5,12 +5,12 @@
     "screens": [
       {
         "_comment1": "un screen est une liste de components",
-        "name": "screen Interarret : prochain arret",
+        "name": "1 -> screen Interarret : prochain arret",
         "_comment2": "size =full|half-left|half-right",
         "size": "full",
         "transitionIN": "fadeIN",
         "transitionOUT": "fadeOUT",
-        "bg": { "color": "#00000", "picture": "bg.png" },
+        "bg": { "color": "bisque", "picture": "bg.jpg" },
         "components": [
           { "name": "clock", "size": "30pt", "position": "top-right" },
           {
@@ -31,60 +31,89 @@
           }
         ]
       },
-      [
-        {
-          "name": "screen Interarret : thermometre V",
-          "size": "half-left",
-          "transitionIN": "fadeIN",
-          "transitionOUT": "fadeOUT",
-          "bg": { "color": "#00000", "picture": "bg.png" },
-          "components": [
-            { "name": "clock", "size": "30pt", "position": "top-right" },
-            {
-              "name": "logo-cg",
-              "size": "30pt",
-              "position": "bottom-right",
-              "resource": "logo1.png"
-            },
-            {
-              "name": "logo-cie",
-              "size": "30pt",
-              "position": "bottom-left",
-              "resource": "logo2.png"
-            },
-            {
-              "name": "thermometre-V",
-              "position": "middle"
-            }
-          ]
-        },
-        {
-          "name": "screen Interarret : thermometre H",
-          "size": "half-right",
-          "transitionIN": "fadeIN",
-          "transitionOUT": "fadeOUT",
-          "bg": { "color": "#00000", "picture": "bg.png" },
-          "components": [
-            { "name": "clock", "size": "30pt", "position": "top-right" },
-            {
-              "name": "logo-cg",
-              "size": "30pt",
-              "position": "bottom-right",
-              "resource": "logo1.png"
-            },
-            {
-              "name": "logo-cie",
-              "size": "30pt",
-              "position": "bottom-left",
-              "resource": "logo2.png"
-            },
-            {
-              "name": "thermometre-H",
-              "position": "middle"
-            }
-          ]
-        }
-      ]
+      {
+        "name": "bi",
+        "sub-screens": [
+          {
+            "name": "2.1 -> screen Interarret : thermometre V",
+            "size": "half-left",
+            "transitionIN": "fadeIN",
+            "transitionOUT": "fadeOUT",
+            "bg": { "color": "bisque" },
+            "components": [
+              { "name": "clock", "size": "30pt", "position": "top-right" },
+              {
+                "name": "logo-cg",
+                "size": "30pt",
+                "position": "bottom-right",
+                "resource": "logo1.png"
+              },
+              {
+                "name": "logo-cie",
+                "size": "30pt",
+                "position": "bottom-left",
+                "resource": "logo2.png"
+              },
+              {
+                "name": "thermometre-V",
+                "position": "middle"
+              }
+            ]
+          },
+          {
+            "name": "2.2 -> screen Interarret : thermometre H",
+            "size": "half-right",
+            "transitionIN": "fadeIN",
+            "transitionOUT": "fadeOUT",
+            "bg": { "color": "bisque"},
+            "components": [
+              { "name": "clock", "size": "30pt", "position": "top-right" },
+              {
+                "name": "logo-cg",
+                "size": "30pt",
+                "position": "bottom-right",
+                "resource": "logo1.png"
+              },
+              {
+                "name": "logo-cie",
+                "size": "30pt",
+                "position": "bottom-left",
+                "resource": "logo2.png"
+              },
+              {
+                "name": "thermometre-H",
+                "position": "middle"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "3 -> screen Interarret : prochain arret",
+        "size": "full",
+        "transitionIN": "fadeIN",
+        "transitionOUT": "fadeOUT",
+        "bg": { "color": "bisque", "picture": "bg.jpg" },
+        "components": [
+          { "name": "clock", "size": "30pt", "position": "top-right" },
+          {
+            "name": "logo-cg",
+            "size": "30pt",
+            "position": "bottom-right",
+            "resource": "logo1.png"
+          },
+          {
+            "name": "logo-cie",
+            "size": "30pt",
+            "position": "bottom-left",
+            "resource": "logo2.png"
+          },
+          {
+            "name": "text",
+            "position": "middle"
+          }
+        ]
+      }
     ]
   }
 }
