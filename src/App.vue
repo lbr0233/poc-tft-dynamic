@@ -1,46 +1,13 @@
 <template>
   <div
-    id="app"
-    class="container-fluid"
+    id="tft"
+    class="container-fluid tft"
   >
-    <div class="row tft">
-      <sequence
-        ref="theSequence"
-        class="col-xl"
-        :sequence-prop="sampleData.sequence"
-      />
-    </div>
-    <div
-      id="debug"
+    <sequence
+      ref="theSequence"
       class="row"
-    >
-      <b-button-toolbar>
-        <b-button-group class="mx-1">
-          <b-button
-            :pressed="isState0"
-            @click="loadState1"
-          >
-            A l'arret
-          </b-button>
-        </b-button-group>
-        <p class="text-left">
-          2 séquences correspondants à 2 états (à l'arrêt et en inter-arret).<br> Les boutons permettent de naviguer de l'un à l'autre.
-        </p>
-        <hr>
-        <p class="text-left">
-          une séquence est une liste ordonnée de screens et on passe d'un écran au suivant suivant un temps donné (setInterval).<br> un screen est un ensemble de composants <br> un composant est un logo, un texte, un texte spécial (ex :une horloge),
-          un bandeau déroulant, ... <br> le modèle de Composant doit exister au préalable (on ne crée pas dynamiquement un composant), <br> exister = le code le décrivant existe (ie. fichier Component-xxxx.vue).
-        </p>
-        <b-button-group class="mx-1">
-          <b-button
-            :pressed="isState1"
-            @click="loadState2"
-          >
-            Inter arret
-          </b-button>
-        </b-button-group>
-      </b-button-toolbar>
-    </div>
+      :sequence-prop="sampleData.sequence"
+    />
   </div>
 </template>
 
@@ -72,6 +39,18 @@ export default {
         loadState2() {
             this.sampleData = state2;
             this.$refs.theSequence.changeScreen(0);
+        },
+        loadNextState(){
+          //On devrait faire si state n chargé alors charger state n+1
+          //Mais pas pour le POC
+          if(this.sampleData.sequence.state === 0){
+            //On est dans le state 1 on charge le 2
+            this.sampleData = state2;
+          }
+          if(this.sampleData.sequence.state === 1){
+            //on est dans le state 2 on revient au 1
+            this.sampleData = state1;
+          }
         }
     }
 }
@@ -84,26 +63,26 @@ html {
 }
 </style>
 <style scoped>
-#app {
+.tft {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
-    color: #2c3e50;
     width: 100%;
     height: 100%;
     position: absolute;
     top: 0;
     left: 0;
-}
-.tft{
-    border: 1px solid red;
+    border: 3px solid red;
     height: 100%;
+    margin:2px;
 }
+
 #debug {
     background-color: antiquewhite;
     position: absolute;
     bottom: 0;
     width: 100%;
+    border: 3px dotted red;
 }
 </style>

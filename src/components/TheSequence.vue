@@ -1,16 +1,16 @@
-/* eslint-disable no-console */
 <template>
   <div
-    class="sequence,container-fluid"
+    class="sequence"
   >
-    <p>Etat : {{ sequenceProp.state }}</p>
-    <transition
-      name="screen"
+    <p>On est dans l'état : {{ sequenceProp.state }}</p>
+    <b-button
+      style="position:fixed; right:20px; top:12px"
+      @click="changeState()"
     >
-      <div>
-        <screen :screen-props="currentScreen" />
-      </div>
-    </transition>
+      >
+    </b-button>
+
+    <screen :screen-props="currentScreen" />
   </div>
 </template>
 
@@ -64,6 +64,10 @@ export default {
             }
             this.currentScreen = this.sequenceProp.screens[this.currentScreenIndex];
             console.log("changeScreen ", this.currentScreenIndex, this.currentScreen);
+        },
+        changeState(){
+            console.log("CALLINGchangeState ");
+            this.$parent.loadNextState();
         }
     }
 }
@@ -71,23 +75,11 @@ export default {
 
 <style scoped>
 .sequence {
-    border-color: black;
-    border-width: thick;
     background-color: aqua;
     width: 100%;
     height: 100%;
-    border: 1px solid green;
-}
-.screen-appear-active-class,
-.screen-enter-active,
-.screen-leave-active {
-    transition: opacity 1s;
-}
-
-.screen-appear-class,
-.screen-enter,
-.screen-leave-to {
-    opacity: 0;
+    border: 3px solid green;
+    margin: 2px;
 }
 
 </style>

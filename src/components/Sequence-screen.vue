@@ -1,17 +1,21 @@
 <template>
-  <div
-    class="screen"
-    :class="computeClass"
-    :style="computeStyle"
+  <transition
+    name="screen"
   >
-    <p>{{ screenProps.name }}</p>
     <div
-      v-for="c in screenProps.components"
-      :key="c.name"
+      class="screen"
+      :class="computeClass"
+      :style="computeStyle"
     >
-      <screen-component :item-props="c" />
+      <p>{{ screenProps.name }}</p>
+      <div
+        v-for="c in screenProps.components"
+        :key="c.name"
+      >
+        <screen-component :item-props="c" />
+      </div>
     </div>
-  </div>
+  </transition>
 </template>
 
 <script>
@@ -86,20 +90,20 @@ export default {
 
 <style scoped>
 .screen {
-    border-color: black;
-    border-width: thick;
     background-color: aquamarine;
     width: 100%;
     height: 100%;
-    border: 1px solid blue;
+    border: 2px solid blue;
+    margin: 2px;
 }
-
 .screen-appear-active-class,
+.screen-enter-active,
 .screen-leave-active {
     transition: opacity 1s;
 }
 
 .screen-appear-class,
+.screen-enter,
 .screen-leave-to {
     opacity: 0;
 }
