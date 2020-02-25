@@ -1,85 +1,61 @@
-<template>
-  <div
-    class="sequence"
-  >
-    <p>On est dans l'état : {{ sequenceProp.state }}</p>
-    <b-button
-      style="position:fixed; right:20px; top:12px"
-      @click="changeState()"
-    >
-      >
-    </b-button>
-
-    <screen :screen-props="currentScreen" />
-  </div>
-</template>
-
 <script>
-import screen from "./Sequence-screen.vue"
-
 export default {
-    name: "TheSequence",
-    components: {
-        screen
-    },
-    props: {
-        sequenceProp: { type: Object, default: function() { return {} } }
-    },
-    data() {
-        return {
-            t: NaN,
-            screenDuration: 10, //in seconds
-            currentScreenIndex: 0,
-            currentScreen: {}
-        }
-    },
-    mounted() {
-        console.log("mounted ");
-        this.initSequencer();
-    },
-    // updated() {
-    //     console.log("updated ");
-    //     this.initSequencer();
-    // },
-    destroyed() {
-        clearInterval(this.t);
-        this.t = NaN;
-    },
-    methods: {
-        initSequencer() {
-            if (!this.t) {
-                this.currentScreen = this.sequenceProp.screens[0];
-                this.t = setInterval(this.changeScreen, this.screenDuration * 1000);
-            }
-        },
-        changeScreen(s) {
-            console.log("CALLINGchangeScreen ", s);
-            if (typeof s === "number") {
-                this.currentScreenIndex = s;
-            } else {
-                this.currentScreenIndex++;
-                if (this.currentScreenIndex >= this.sequenceProp.screens.length) {
-                    this.currentScreenIndex = 0;
-                }
-            }
-            this.currentScreen = this.sequenceProp.screens[this.currentScreenIndex];
-            console.log("changeScreen ", this.currentScreenIndex, this.currentScreen);
-        },
-        changeState(){
-            console.log("CALLINGchangeState ");
-            this.$parent.loadNextState();
-        }
-    }
-}
+  name: "TheSequence",
+  props: {
+    nbHeaderWidgets: { type: Number, required: true },
+    nbFooterWidgets: { type: Number, required: true },
+    nbDefaultWidgets: { type: Number, required: true }
+  },
+  render(createElement) {
+    console.log("render");
+    //On a 12 colonnes max (bootstrap)
+    //notre slot sera inséré dans une des cols en fonction de sa position
+
+    const hCols = createElement("b-col");
+    const h = createElement(
+      "b-row",
+      {
+        class: "header"
+      },
+      this.$slots.header
+    );
+    const def = createElement("b-row", this.$slots.default);
+
+    const f = createElement(
+      "footer",
+      {
+        class: "footer"
+      },
+      this.$slots.footer
+    );
+
+    return createElement(
+      "div",
+      {
+        class: "container-fluid sequence"
+      },
+      [h, def, f]
+    );
+  }
+};
 </script>
 
 <style scoped>
 .sequence {
-    background-color: aqua;
-    width: 100%;
-    height: 100%;
-    border: 3px solid green;
-    margin: 2px;
+  background-color: aqua;
+  /* width: 100%;*/
+  height: 100%;
+  border: 3px solid green;
+  margin: 2px;
 }
 
+.header {
+  /* position: absolute; */
+  top: 0;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+}
 </style>

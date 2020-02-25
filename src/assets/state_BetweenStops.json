@@ -14,13 +14,13 @@
         "components": [
           { "name": "clock", "size": "30pt", "position": "top-right" },
           {
-            "name": "logo-cg",
+            "name": "logo",
             "size": "30pt",
             "position": "bottom-right",
             "resource": "logo1.png"
           },
           {
-            "name": "logo-cie",
+            "name": "logo",
             "size": "30pt",
             "position": "bottom-left",
             "resource": "logo2.png"
@@ -43,13 +43,13 @@
             "components": [
               { "name": "clock", "size": "30pt", "position": "top-right" },
               {
-                "name": "logo-cg",
+                "name": "logo",
                 "size": "30pt",
                 "position": "bottom-right",
                 "resource": "logo1.png"
               },
               {
-                "name": "logo-cie",
+                "name": "logo",
                 "size": "30pt",
                 "position": "bottom-left",
                 "resource": "logo2.png"
@@ -69,13 +69,13 @@
             "components": [
               { "name": "clock", "size": "30pt", "position": "top-right" },
               {
-                "name": "logo-cg",
+                "name": "logo",
                 "size": "30pt",
                 "position": "bottom-right",
                 "resource": "logo1.png"
               },
               {
-                "name": "logo-cie",
+                "name": "logo",
                 "size": "30pt",
                 "position": "bottom-left",
                 "resource": "logo2.png"
@@ -97,13 +97,13 @@
         "components": [
           { "name": "clock", "size": "30pt", "position": "top-right" },
           {
-            "name": "logo-cg",
+            "name": "logo",
             "size": "30pt",
             "position": "bottom-right",
             "resource": "logo1.png"
           },
           {
-            "name": "logo-cie",
+            "name": "logo",
             "size": "30pt",
             "position": "bottom-left",
             "resource": "logo2.png"
