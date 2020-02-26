@@ -3,50 +3,78 @@
     "_comment": "sequence est une liste ordonnée de screens, ",
     "state": 0,
     "components": [
-      { "name": "clock", "fontSize": "100px", "position": "header-right" },
+      { "name": "clock", "fontSize": "100px", "position": "header-11,2" },
       {
         "name": "logo",
-        "position": "footer-right",
+        "position": "footer-12",
         "height": "100px",
         "resource": "RCA.gif"
       },
       {
         "name": "logo",
         "height": "100px",
-        "position": "footer-left",
+        "position": "footer-1",
         "resource": "lignesdazur.png"
       },
       {
-        "name": "text"
+        "name": "jlb",
+        "position": "footer-6,2",
+        "text": "Destination, qui défile et c'est beau",
+        "fontSize": "40pt"
       }
     ],
-    "screens": [
-      {
-        "_comment1": "un screen est une liste de components",
-        "name": "1 -> screen A l'arret : arret en cours",
-        "_comment2": "size =full|half-left|half-right",
-        "size": "full",
-        "transitionIN": "fadeIN",
-        "transitionOUT": "fadeOUT",
-        "bg": { "color": "azure", "picture": "bg.jpg" },
-        "components": []
-      },
-      {
-        "name": "2 -> screen A l'arret : correspondances",
-        "size": "full",
-        "transitionIN": "fadeIN",
-        "transitionOUT": "fadeOUT",
-        "bg": { "color": "azure", "picture": "bg.jpg" },
-        "components": []
-      },
-      {
-        "name": "3 -> screen A l'arret : next stop",
-        "size": "full",
-        "transitionIN": "fadeIN",
-        "transitionOUT": "fadeOUT",
-        "bg": { "color": "azure" },
-        "components": []
-      }
-    ]
+    "screen": {
+      "_comment1": "slide|fade",
+      "transition": "slide",
+      "_comment2": "size =full|half-left|half-right",
+      "size": "full",
+      "slides": [
+        {
+          "_comment1": "un slide est une liste de components",
+          "name": "1 -> slide A l'arret : arret en cours",
+          "bg": { "color": "azure", "picture": "bg.jpg" },
+          "components": [
+            {
+              "name": "jlb",
+              "title": "ARRET",
+              "text": "Nom de l'arret courant, qui défile et c'est beau",
+              "fontSize": "100pt"
+            }
+          ]
+        },
+        {
+          "name": "2 -> slide A l'arret : correspondances",
+          "bg": { "color": "azure", "picture": "bg.jpg" },
+          "components": []
+        },
+        {
+          "name": "3 -> slide A l'arret : ThermometreH",
+          "bg": { "color": "azure", "picture": "bg.jpg" },
+          "components": [
+            {
+              "name": "thermoH",
+              "arrets": [
+                "Arret courant",
+                "arret suivant",
+                "arret encore suivant"
+              ],
+              "fontSize": "100pt"
+            }
+          ]
+        },
+        {
+          "name": "4 -> slide A l'arret : next stop",
+          "bg": { "color": "azure" },
+          "components": [
+            {
+              "name": "jlb",
+              "title": "PROCHAIN ARRET",
+              "text": "Nom de l'arret suivant, qui défile et c'est toujours beau",
+              "fontSize": "100pt"
+            }
+          ]
+        }
+      ]
+    }
   }
 }

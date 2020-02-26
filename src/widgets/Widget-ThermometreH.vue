@@ -1,5 +1,27 @@
 <template>
-  <b-img :src="getSrc" alt="logo" :style="computeStyle" />
+  <b-row>
+    <b-col>
+      <b-img src="require('../assets/fleche.png')" fluid-grow />
+    </b-col>
+    <b-col>
+      <b-img src="require('../assets/atstop.png')" alt="arret" fluid-grow />
+    </b-col>
+    <b-col cols="3">
+      <b-img src="require('../assets/fleche.png')" fluid-grow />
+    </b-col>
+    <b-col>
+      <b-img src="require('../assets/atstop.png')" alt="arret" fluid-grow />
+    </b-col>
+    <b-col cols="3">
+      <b-img src="require('../assets/fleche.png')" fluid-grow />
+    </b-col>
+    <b-col>
+      <b-img src="require('../assets/atstop.png')" alt="arret" fluid-grow />
+    </b-col>
+    <b-col cols="2">
+      <b-img src="require('../assets/fleche.png')" />
+    </b-col>
+  </b-row>
 </template>
 
 <script>
