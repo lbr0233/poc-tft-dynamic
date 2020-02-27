@@ -1,5 +1,5 @@
 <template>
-  <transition :name="screenProps.transition">
+  <transition :name="screenProps.transition" mode="out-in">
     <div class="screen" :class="computeClass" :style="computeStyle">
       <p>{{ slideProps.name }}</p>
       <component
@@ -15,10 +15,11 @@
 <script>
 import jlb from "../widgets/Widget-Jlb.vue";
 import thermoH from "../widgets/Widget-ThermometreH.vue";
+import diaporama from "../widgets/Widget-Diaporama.vue";
 
 export default {
   name: "SequenceScreen",
-  components: { jlb, thermoH },
+  components: { jlb, thermoH, diaporama },
   props: {
     screenProps: {
       type: Object,
@@ -78,15 +79,18 @@ export default {
   height: 100%; */
   border: 2px solid blue;
   margin: 2px;
+  flex: 1 1 auto;
 }
 
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 1s;
+  position: absolute;
 }
 .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
   opacity: 0;
 }
+
 .slide-enter-active {
   animation: slideIn 5s;
 }

@@ -1,5 +1,8 @@
 <template>
-  <div id="tft" class="tft">
+  <div
+    id="tft"
+    class="tft"
+  >
     <div class="debug">
       <!-- Pour debug/demo-->
       <p>On est dans l'état : {{ journeyData.sequence.state }}</p>

@@ -1,6 +1,5 @@
 {
   "sequence": {
-    "_comment": "sequence est une liste ordonnée de screens, ",
     "state": 0,
     "components": [
       { "name": "clock", "fontSize": "100px", "position": "header-11,2" },
@@ -23,6 +22,7 @@
         "fontSize": "40pt"
       }
     ],
+    "_comment": "sequence est une liste ordonnée de screens, ",
     "screen": {
       "_comment1": "slide|fade",
       "transition": "slide",

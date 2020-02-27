@@ -1,5 +1,5 @@
 <template>
-  <b-img :src="getSrc" alt="logo" :style="computeStyle" />
+  <b-img :src="getSrc" alt="logo" :style="computeStyle" rounded />
 </template>
 
 <script>

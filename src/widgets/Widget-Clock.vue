@@ -1,5 +1,8 @@
 <template>
-  <b-col class="clock" :style="getStyle">
+  <b-col
+    class="clock"
+    :style="getStyle"
+  >
     <p>
       {{ timestamp }}
     </p>

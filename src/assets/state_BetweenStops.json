@@ -1,119 +1,67 @@
 {
   "sequence": {
-    "_comment": "sequence est une liste ordonnée de screens",
     "state": 1,
-    "screens": [
+    "components": [
+      { "name": "clock", "fontSize": "100px", "position": "header-11,2" },
       {
-        "_comment1": "un screen est une liste de components",
-        "name": "1 -> screen Interarret : prochain arret",
-        "_comment2": "size =full|half-left|half-right",
-        "size": "full",
-        "transitionIN": "fadeIN",
-        "transitionOUT": "fadeOUT",
-        "bg": { "color": "bisque", "picture": "bg.jpg" },
-        "components": [
-          { "name": "clock", "size": "30pt", "position": "top-right" },
-          {
-            "name": "logo",
-            "size": "30pt",
-            "position": "bottom-right",
-            "resource": "logo1.png"
-          },
-          {
-            "name": "logo",
-            "size": "30pt",
-            "position": "bottom-left",
-            "resource": "logo2.png"
-          },
-          {
-            "name": "text",
-            "position": "middle"
-          }
-        ]
+        "name": "logo",
+        "position": "footer-12",
+        "height": "100px",
+        "resource": "RCA.gif"
       },
       {
-        "name": "bi",
-        "sub-screens": [
-          {
-            "name": "2.1 -> screen Interarret : thermometre V",
-            "size": "half-left",
-            "transitionIN": "fadeIN",
-            "transitionOUT": "fadeOUT",
-            "bg": { "color": "bisque" },
-            "components": [
-              { "name": "clock", "size": "30pt", "position": "top-right" },
-              {
-                "name": "logo",
-                "size": "30pt",
-                "position": "bottom-right",
-                "resource": "logo1.png"
-              },
-              {
-                "name": "logo",
-                "size": "30pt",
-                "position": "bottom-left",
-                "resource": "logo2.png"
-              },
-              {
-                "name": "thermometre-V",
-                "position": "middle"
-              }
-            ]
-          },
-          {
-            "name": "2.2 -> screen Interarret : thermometre H",
-            "size": "half-right",
-            "transitionIN": "fadeIN",
-            "transitionOUT": "fadeOUT",
-            "bg": { "color": "bisque"},
-            "components": [
-              { "name": "clock", "size": "30pt", "position": "top-right" },
-              {
-                "name": "logo",
-                "size": "30pt",
-                "position": "bottom-right",
-                "resource": "logo1.png"
-              },
-              {
-                "name": "logo",
-                "size": "30pt",
-                "position": "bottom-left",
-                "resource": "logo2.png"
-              },
-              {
-                "name": "thermometre-H",
-                "position": "middle"
-              }
-            ]
-          }
-        ]
+        "name": "logo",
+        "height": "100px",
+        "position": "footer-1",
+        "resource": "lignesdazur.png"
       },
       {
-        "name": "3 -> screen Interarret : prochain arret",
-        "size": "full",
-        "transitionIN": "fadeIN",
-        "transitionOUT": "fadeOUT",
-        "bg": { "color": "bisque", "picture": "bg.jpg" },
-        "components": [
-          { "name": "clock", "size": "30pt", "position": "top-right" },
-          {
-            "name": "logo",
-            "size": "30pt",
-            "position": "bottom-right",
-            "resource": "logo1.png"
-          },
-          {
-            "name": "logo",
-            "size": "30pt",
-            "position": "bottom-left",
-            "resource": "logo2.png"
-          },
-          {
-            "name": "text",
-            "position": "middle"
-          }
-        ]
+        "name": "jlb",
+        "position": "footer-6,2",
+        "text": "Destination, qui défile et c'est beau",
+        "fontSize": "40pt"
       }
-    ]
+    ],
+    "screen": {
+      "transition": "fade",
+      "size": "full",
+      "slides": [
+        {
+          "name": "1 -> slide inter-arret : prochain arret",
+          "bg": { "color": "azure", "picture": "bg.jpg" },
+          "components": [
+            {
+              "name": "jlb",
+              "title": "PROCHAIN ARRET",
+              "text": "Nom de l'arret suivant, qui défile et c'est toujours beau",
+              "fontSize": "100pt"
+            }
+          ]
+        },
+        {
+          "name": "2 -> slide inter-arret : ThermometreH",
+          "components": [
+            {
+              "name": "thermoH",
+              "arrets": [
+                "Arret courant",
+                "arret suivant",
+                "arret encore suivant"
+              ],
+              "fontSize": "100pt"
+            }
+          ]
+        },
+        {
+          "name": "3 -> slide inter-arret : Diaporama",
+          "components": [
+            {
+              "name": "diaporama",
+              "photos": ["portNice.png", "onEnAGros.gif"]
+            }
+          ]
+        }
+      ]
+    }
   }
 }

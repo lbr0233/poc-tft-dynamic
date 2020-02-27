@@ -112,7 +112,7 @@ export default {
   //On préfère créer le template de façon programmable car on ne sait pas d'avance
   // ce qu'on aura à afficher.
   render(createElement) {
-    console.log("render");
+    // console.log("render");
     const h = createElement(
       "b-row",
       {
@@ -167,7 +167,7 @@ export default {
   border: 3px solid black;
   margin: auto;
   padding: 1px;
-  flex-grow: 1;
+  flex: 1;
 }
 .header {
   /* position: absolute; */

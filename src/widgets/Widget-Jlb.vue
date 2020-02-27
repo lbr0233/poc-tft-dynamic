@@ -4,7 +4,11 @@
       {{ attributes.title }}
     </h1>
     <div class="defileParent">
-      <span data-text="attributes.text" class="defile" :style="getFontSize">
+      <span
+        data-text="attributes.text"
+        class="defile"
+        :style="getFontSize"
+      >
         {{ attributes.text }}
       </span>
     </div>
@@ -49,7 +53,7 @@ h1 {
 .defile {
   /* display: block; */
   animation: linear marqueelike 10s infinite;
-  margin-left: -100%;
+  margin-left: -200%;
   padding: 0 5px;
   text-align: left;
   /* height: 25px; */
